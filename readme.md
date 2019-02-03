@@ -36,7 +36,7 @@ User story is a **description** of **objective**, which helps a person to achiev
 
 
 ### Win/Lose Page Wireframe:
-![alt text](https://i.imgur.com/7OPxbgJ.png "Win/Lose Page Wireframe")
+![alt text](https://imgur.com/a/e5sg6K8 "Win/Lose Page Wireframe")
 
 
 
