@@ -26,17 +26,17 @@ User story is a **description** of **objective**, which helps a person to achiev
 ## Wireframes
 
 ### Intro Page Wireframe:
-![alt text](https://i.imgur.com/RuRIgYN.png "Intro Page Wireframe")
+![intro page wireframe](https://i.imgur.com/RuRIgYN.png "Intro Page Wireframe")
 
 
 
 ### Main Play Page Wireframe:
-![alt text](https://i.imgur.com/g1ktOvZ.png "Main Play Page Wireframe")
+![main play wireframe](https://i.imgur.com/g1ktOvZ.png "Main Play Page Wireframe")
 
 
 
 ### Win/Lose Page Wireframe:
-![alt text](https://imgur.com/a/e5sg6K8 "Win/Lose Page Wireframe")
+![win lose wireframe](https://i.imgur.com/EanuBJf.png "Win/Lose Page Wireframe")
 
 
 
