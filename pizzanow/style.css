@@ -1,0 +1,236 @@
+header{
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
+}
+
+h1{
+  border: 2px solid black;
+  background-color: green;
+  margin: 15px;
+  top: -25px;
+  height: 190px;
+  width: 900px;
+  margin: 50px 15px 0 15px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 125px;
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 45px 20px;
+}
+
+.start{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:40%;
+}
+
+#instructions{
+  border: 2px solid black;
+  height: 75%;
+  background-color: indigo;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:5px;
+}
+
+#instructions{
+  font-size: 35px;
+}
+
+p{
+  font-size: 20px;
+  text-align: justify;
+  padding: 0px 35px;
+}
+
+#start{
+  border: 2px solid black;
+  height: 25%;
+  background-color: yellow;
+  margin:15px;
+  width: 200px;
+  align-self: center;
+  font-size:50px;
+}
+
+.hero-image{
+  border: 2px solid black;
+  height: 500px;
+  width: 60%;
+  background-color: blue;
+  margin: 15px;
+}
+
+.scoreboard{
+  border: 2px solid black;
+  background-color: green;
+  margin: 15px;
+  top: -25px;
+  height: 160px;
+  width: 900px;
+  margin: 50px 15px 0 15px;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 60px;
+}
+
+.game{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.middle{
+  border: 2px solid black;
+  height: 300px;
+  width:900px;
+  position: relative;
+}
+
+/* .customer{
+  border: 2px solid black;
+  height: 65px;
+  width: 50px;
+  border-radius: 20px;
+  position: absolute;
+} */
+
+
+.c1{
+  border: 2px solid black;
+  height: 65px;
+  width: 50px;
+  border-radius: 20px;
+  position: absolute;
+  left:30px;
+  background-color: red;
+}
+
+.c2{
+  border: 2px solid black;
+  height: 65px;
+  width: 50px;
+  border-radius: 20px;
+  position: absolute;
+  left: 420px;
+  background-color: orange;
+}
+
+.c3{
+  border: 2px solid black;
+  height: 65px;
+  width: 50px;
+  border-radius: 20px;
+  position: absolute;
+  left: 810px;
+  background-color: maroon;
+}
+
+.bottom{
+  border: 2px solid black;
+  height: 140px;
+  width: 900px;
+  background-color: blue;
+  position: relative;
+}
+
+.station{
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  position: absolute;
+}
+
+#s1{
+  left:30px;
+  background-color: white;
+}
+
+#s2{
+  left: 420px;
+  background-color: white;
+}
+
+#s3{
+  left: 810px;
+  background-color: white;
+}
+
+.served{
+  margin: 8px;
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: yellow;
+  position: absolute;
+}
+
+.player {
+  background-color: purple;
+  border: 2px solid black;
+  height: 65px;
+  width: 50px;
+  border-radius: 20px;
+  position: absolute;
+  top: 60px;
+}
+
+.win-lose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result{
+  border: 2px solid black;
+  height: 110px;
+  width: 750px;
+  background-color: green;
+  margin: 10px;
+  font-size: 75px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.review{
+  border: 2px solid black;
+  height: 85px;
+  width: 500px;
+  background-color: blue;
+  margin: -5px 10px 10px 10px;
+  font-size: 25px;
+  padding: 15px;
+  text-align: justify;
+}
+
+.final-image{
+  border: 2px solid black;
+  height: 600px;
+  width: 600px;
+  background-color: purple;
+  margin: 10px;
+}
+
+#restart{
+  border: 2px solid black;
+  background-color: yellow;
+  margin:10px;
+  width: 250px;
+  font-size:50px;
+  text-align:center;
+}
