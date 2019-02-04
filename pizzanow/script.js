@@ -5,24 +5,31 @@
 //c3 will move up 40 px every second
 //defense
 
-const enemy = () => {
-
 const customer = document.querySelector('.middle')
 
-let c1 = document.createElement('div')
-c1.classList.add('c1')
-let c2 = document.createElement('div')
-c2.classList.add('c2')
-let c3 = document.createElement('div')
-c3.classList.add('c3')
+const enemy1 = () => {
+  let c1 = document.createElement('div')
+  c1.classList.add('c1')
 
-customer.appendChild(c1);
-customer.appendChild(c2);
-customer.appendChild(c3);
-
+  customer.appendChild(c1);
 };
+enemy1();
 
-enemy();
+const enemy2 = () => {
+  let c2 = document.createElement('div')
+  c2.classList.add('c2')
+
+  customer.appendChild(c2);
+};
+enemy2();
+
+const enemy3 = () => {
+  let c3 = document.createElement('div')
+  c3.classList.add('c3')
+
+  customer.appendChild(c3);
+};
+enemy3();
 
 const player = document.querySelector('.player');
 const body = document.querySelector('body');
