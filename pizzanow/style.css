@@ -109,7 +109,7 @@ p{
   position: absolute;
   left:30px;
   background-color: red;
-  transition: top 2s;
+  transition: top 15s;
   transition-timing-function: linear;
 }
 
@@ -121,7 +121,7 @@ p{
   position: absolute;
   left: 420px;
   background-color: orange;
-  transition: top 2s;
+  transition: top 8s;
   transition-timing-function: linear;
 }
 
@@ -133,7 +133,7 @@ p{
   position: absolute;
   left: 810px;
   background-color: maroon;
-  transition: top 2s;
+  transition: top 4s;
   transition-timing-function: linear;
 }
 

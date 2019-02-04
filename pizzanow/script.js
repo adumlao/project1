@@ -6,87 +6,82 @@
 
 const customer = document.querySelector('.middle')
 
-const enemy1 = () => {
-  const startTop = (c1) => {
-        c1.style.top = 0 + 'px';
-      };
+let c1 = document.createElement('div')
+let c2 = document.createElement('div')
+let c3 = document.createElement('div')
 
-  let c1 = document.createElement('div')
+const enemy1 = () => {
   c1.classList.add('c1')
   customer.appendChild(c1);
 
-  const moveDown = (c1) => {
-    for (let i=0; i<240; i++){
+  const startTop = () => {
+        c1.style.top = 0 + 'px';
+      };
+
+  const moveDown = () => {
+    let i = 234;
     c1.style.top = `${i}px`;
     i += 5;
     };
-   };
 
-   startTop(c1);
+   startTop();
 
    setTimeout(() => {
-    moveDown(c1)}, 5000);
+    moveDown()}, 2000);
 
    return c1;
 };
 
 const enemy2 = () => {
-  const startTop = (c2) => {
-        c2.style.top = 0 + 'px';
-      };
-
-  let c2 = document.createElement('div')
   c2.classList.add('c2')
   customer.appendChild(c2);
 
-  const moveDown = (c2) => {
-    for (let i=0; i<240; i++){
+  const startTop = () => {
+        c2.style.top = 0 + 'px';
+      };
+
+  const moveDown = () => {
+    let i = 234;
     c2.style.top = `${i}px`;
     i += 5;
     };
-   };
 
-   startTop(c2);
+   startTop();
 
    setTimeout(() => {
-    moveDown(c2)}, 3000);
+    moveDown()}, 5000);
 
    return c2;
 };
 
 const enemy3 = () => {
-  const startTop = (c3) => {
-        c3.style.top = 0 + 'px';
-      };
-
-  let c3 = document.createElement('div')
   c3.classList.add('c3')
   customer.appendChild(c3);
 
-  const moveDown = (c3) => {
-    for (let i=0; i<240; i++){
+  const startTop = () => {
+        c3.style.top = 0 + 'px';
+      };
+
+  const moveDown = () => {
+    let i = 234;
     c3.style.top = `${i}px`;
     i += 5;
     };
-   };
 
-   startTop(c3);
+   startTop();
 
    setTimeout(() => {
-    moveDown(c3)}, 8000);
+    moveDown()}, 3000);
 
    return c3;
 };
 
-const fiveEnemies = () => {
-  for (let i=0; i<5; i++){
-    enemy1();
-    enemy2();
-    enemy3();
-  };
-};
 
-fiveEnemies();
+enemy1();
+enemy2();
+enemy3();
+
+// setTimeout(enemy1, 6000);
 
 //defense
 //add event listeners to .player
