@@ -12,6 +12,15 @@ const enemy1 = () => {
   c1.classList.add('c1')
 
   customer.appendChild(c1);
+
+  let moveDown = () => {
+    let i = 30
+    c1.style.top = `${i}px`
+    i += 30;
+     };
+
+   setInterval(() => {
+     moveDown()}, 1000);
 };
 enemy1();
 

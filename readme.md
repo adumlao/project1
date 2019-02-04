@@ -44,8 +44,17 @@ User story is a **description** of **objective**, which helps a person to achiev
 
 ### MVP
 #### Main Play Page
-1. Graphics / CSS / Animation : 8 hrs (day 1)
-2. Javascript / Game Logic : 12 hrs (day 2 and 3)
+1. Javascript / Game Logic : 12 hrs (day 1 and 2)
+  * player movability function - move left and right
+  * player attack function - change station element
+  * enemy moves down at a set setInterval
+  * win functionality - all enemies defeated
+  * lose functionality - enemy reaches the player line
+  * add a start button
+  * add reset button
+2. Graphics / CSS : 8 hrs (day 2 and 3)
+  * create a player and player station
+  * create attack state graphic
 
 ### PostMVP
 1. Intro Page (3 hrs - day 3)
@@ -69,8 +78,7 @@ function reverse(string) {
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution. This section will help you track errors and how you resolved them.
 
-#### SAMPLE.....
-`**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier`                               
-`**RESOLUTION**: Missing comma after first object in sources {} object`
+#### Getting the enemy to move down every 3 seconds
+`**ERROR**: Enemy gets stuck at 30px and does not move down after`                               
+`**RESOLUTION**: None yet`
