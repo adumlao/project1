@@ -95,8 +95,10 @@ p{
 .middle{
   border: 2px solid black;
   height: 300px;
-  width:900px;
+  width: 900px;
   position: relative;
+  transition: top 2s;
+  transition-timing-function: linear;
 }
 
 .c1{
@@ -107,6 +109,8 @@ p{
   position: absolute;
   left:30px;
   background-color: red;
+  transition: top 2s;
+  transition-timing-function: linear;
 }
 
 .c2{
@@ -117,6 +121,8 @@ p{
   position: absolute;
   left: 420px;
   background-color: orange;
+  transition: top 2s;
+  transition-timing-function: linear;
 }
 
 .c3{
@@ -127,6 +133,8 @@ p{
   position: absolute;
   left: 810px;
   background-color: maroon;
+  transition: top 2s;
+  transition-timing-function: linear;
 }
 
 .bottom{

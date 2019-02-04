@@ -1,44 +1,101 @@
 //enemy
 //5 enemies will get added to #c1 #c2 and #c3
-//c1 will move up 60px every second
-//c2 will move up 20px every second
-//c3 will move up 40 px every second
-//defense
+//c1 will move up 5px every 5seconds
+//c2 will move up 5px every 3seconds
+//c3 will move up 5px every 8seconds
 
 const customer = document.querySelector('.middle')
 
 const enemy1 = () => {
+  const startTop = (c1) => {
+        c1.style.top = 0 + 'px';
+      };
+
   let c1 = document.createElement('div')
   c1.classList.add('c1')
-
   customer.appendChild(c1);
 
-  let moveDown = () => {
-    let i = 30
-    c1.style.top = `${i}px`
-    i += 30;
-     };
+  const moveDown = (c1) => {
+    for (let i=0; i<240; i++){
+    c1.style.top = `${i}px`;
+    i += 5;
+    };
+   };
 
-   setInterval(() => {
-     moveDown()}, 1000);
+   startTop(c1);
+
+   setTimeout(() => {
+    moveDown(c1)}, 5000);
+
+   return c1;
 };
-enemy1();
 
 const enemy2 = () => {
+  const startTop = (c2) => {
+        c2.style.top = 0 + 'px';
+      };
+
   let c2 = document.createElement('div')
   c2.classList.add('c2')
-
   customer.appendChild(c2);
+
+  const moveDown = (c2) => {
+    for (let i=0; i<240; i++){
+    c2.style.top = `${i}px`;
+    i += 5;
+    };
+   };
+
+   startTop(c2);
+
+   setTimeout(() => {
+    moveDown(c2)}, 3000);
+
+   return c2;
 };
-enemy2();
 
 const enemy3 = () => {
+  const startTop = (c3) => {
+        c3.style.top = 0 + 'px';
+      };
+
   let c3 = document.createElement('div')
   c3.classList.add('c3')
-
   customer.appendChild(c3);
+
+  const moveDown = (c3) => {
+    for (let i=0; i<240; i++){
+    c3.style.top = `${i}px`;
+    i += 5;
+    };
+   };
+
+   startTop(c3);
+
+   setTimeout(() => {
+    moveDown(c3)}, 8000);
+
+   return c3;
 };
-enemy3();
+
+const fiveEnemies = () => {
+  for (let i=0; i<5; i++){
+    enemy1();
+    enemy2();
+    enemy3();
+  };
+};
+
+fiveEnemies();
+
+//defense
+//add event listeners to .player
+//when left arrow is clicked, moves left
+//when right arrow is clicked, moves right
+//when the spacebar is clicked
+//if at 35px or 4255px or 816px
+//append a new element '.served' to the respective station
+//set timeout so after 1 second, .served disappears
 
 const player = document.querySelector('.player');
 const body = document.querySelector('body');
@@ -83,14 +140,6 @@ const movePlayer = () => {
 };
 
 body.addEventListener('keyup', movePlayer);
-
-//add event listeners to .player
-//when left arrow is clicked, moves left
-//when right arrow is clicked, moves right
-//when the spacebar is clicked
-//if at 35px or 4255px or 816px
-//append a new element '.served' to the respective station
-//set timeout so after 1 second, .served disappears
 
 
 //win LOSE
