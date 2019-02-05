@@ -6,63 +6,40 @@
 
 const customer = document.querySelector('.middle')
 
-let c1 = document.createElement('div')
-let c2 = document.createElement('div')
-let c3 = document.createElement('div')
+// const c1 = document.createElement('div')
+// const c2 = document.createElement('div')
+// const c3 = document.createElement('div')
 
-const enemy1 = () => {
+let enemy = () => {
+  let c1 = document.createElement('div')
   c1.classList.add('c1')
   customer.appendChild(c1);
 
-  const startTop = () => {
-        c1.style.top = 0 + 'px';
-      };
-
-  const moveDown = () => {
-    let i = 234;
-    c1.style.top = `${i}px`;
-    i += 5;
-    };
-
-   startTop();
-
-   setTimeout(() => {
-    moveDown()}, 2000);
-
-   return c1;
-};
-
-const enemy2 = () => {
+  let c2 = document.createElement('div')
   c2.classList.add('c2')
   customer.appendChild(c2);
 
-  const startTop = () => {
-        c2.style.top = 0 + 'px';
-      };
-
-  const moveDown = () => {
-    let i = 234;
-    c2.style.top = `${i}px`;
-    i += 5;
-    };
-
-   startTop();
-
-   setTimeout(() => {
-    moveDown()}, 5000);
-
-   return c2;
-};
-
-const enemy3 = () => {
+  let c3 = document.createElement('div')
   c3.classList.add('c3')
   customer.appendChild(c3);
 
   const startTop = () => {
+        c1.style.top = 0 + 'px';
+        c2.style.top = 0 + 'px';
         c3.style.top = 0 + 'px';
       };
 
-  const moveDown = () => {
+  const moveDown1 = () => {
+    let i = 234;
+    c1.style.top = `${i}px`;
+    i += 5;
+    };
+  const moveDown2 = () => {
+    let i = 234;
+    c2.style.top = `${i}px`;
+    i += 5;
+    };
+  const moveDown3 = () => {
     let i = 234;
     c3.style.top = `${i}px`;
     i += 5;
@@ -71,17 +48,25 @@ const enemy3 = () => {
    startTop();
 
    setTimeout(() => {
-    moveDown()}, 3000);
+    moveDown1()}, 2000);
+   setTimeout(() => {
+     moveDown2()}, 5000);
+   setTimeout(() => {
+     moveDown3()}, 3000);
 
+
+   return c1;
+   return c2;
    return c3;
 };
 
+const threeEnemies = () => {
+  setTimeout(enemy, 1000);
+  setTimeout(enemy, 5000);
+  setTimeout(enemy, 10000);
+};
 
-enemy1();
-enemy2();
-enemy3();
-
-// setTimeout(enemy1, 6000);
+threeEnemies();
 
 //defense
 //add event listeners to .player

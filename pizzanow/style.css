@@ -97,8 +97,6 @@ p{
   height: 300px;
   width: 900px;
   position: relative;
-  transition: top 2s;
-  transition-timing-function: linear;
 }
 
 .c1{
@@ -121,7 +119,7 @@ p{
   position: absolute;
   left: 420px;
   background-color: orange;
-  transition: top 8s;
+  transition: top 5s;
   transition-timing-function: linear;
 }
 
@@ -133,7 +131,7 @@ p{
   position: absolute;
   left: 810px;
   background-color: maroon;
-  transition: top 4s;
+  transition: top 8s;
   transition-timing-function: linear;
 }
 
