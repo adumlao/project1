@@ -5,6 +5,11 @@
 //c3 will move up 5px every 8seconds
 
 const customer = document.querySelector('.middle')
+
+let c1 = document.createElement('div')
+let c2 = document.createElement('div')
+let c3 = document.createElement('div')
+
 let i = 0;
 let j= 0;
 let k =0;
@@ -16,15 +21,12 @@ const lost = () => {
 };
 
 let enemy = () => {
-  let c1 = document.createElement('div')
   c1.classList.add('c1')
   customer.appendChild(c1);
 
-  let c2 = document.createElement('div')
   c2.classList.add('c2')
   customer.appendChild(c2);
 
-  let c3 = document.createElement('div')
   c3.classList.add('c3')
   customer.appendChild(c3);
 
@@ -56,13 +58,7 @@ let enemy = () => {
    setInterval(moveDown3, 1500);
 };
 
-const more = () => {
-  for (let l=0; l<2; l++){
-    enemy();
-  }
-}
-
-setTimeout(more, 3000);
+setTimeout(enemy, 1000);
 
 //defense
 //add event listeners to .player
