@@ -107,8 +107,8 @@ p{
   position: absolute;
   left:30px;
   background-color: red;
-  transition: top 15s;
-  transition-timing-function: linear;
+  /* transition: top 1s;
+  transition-timing-function: linear; */
 }
 
 .c2{
@@ -119,8 +119,8 @@ p{
   position: absolute;
   left: 420px;
   background-color: orange;
-  transition: top 5s;
-  transition-timing-function: linear;
+  /* transition: top 1s;
+  transition-timing-function: linear; */
 }
 
 .c3{
@@ -131,8 +131,8 @@ p{
   position: absolute;
   left: 810px;
   background-color: maroon;
-  transition: top 8s;
-  transition-timing-function: linear;
+  /* transition: top 1s;
+  transition-timing-function: linear; */
 }
 
 .bottom{

@@ -1,14 +1,19 @@
 //enemy
-//5 enemies will get added to #c1 #c2 and #c3
+//3 enemies will get added to #c1 #c2 and #c3
 //c1 will move up 5px every 5seconds
 //c2 will move up 5px every 3seconds
 //c3 will move up 5px every 8seconds
 
 const customer = document.querySelector('.middle')
+let i = 0;
+let j= 0;
+let k =0;
 
-// const c1 = document.createElement('div')
-// const c2 = document.createElement('div')
-// const c3 = document.createElement('div')
+const lost = () => {
+  if (i > 240 || j > 240 || k > 240){
+    console.log('You Lost!')
+  };
+};
 
 let enemy = () => {
   let c1 = document.createElement('div')
@@ -30,43 +35,34 @@ let enemy = () => {
       };
 
   const moveDown1 = () => {
-    let i = 234;
     c1.style.top = `${i}px`;
-    i += 5;
+    i += 30;
+    lost();
     };
   const moveDown2 = () => {
-    let i = 234;
-    c2.style.top = `${i}px`;
-    i += 5;
+    c2.style.top = `${j}px`;
+    j += 30;
+    lost();
     };
   const moveDown3 = () => {
-    let i = 234;
-    c3.style.top = `${i}px`;
-    i += 5;
+    c3.style.top = `${k}px`;
+    k += 30;
+    lost();
     };
 
    startTop();
-
-   setTimeout(() => {
-    moveDown1()}, 2000);
-   setTimeout(() => {
-     moveDown2()}, 5000);
-   setTimeout(() => {
-     moveDown3()}, 3000);
-
-
-   return c1;
-   return c2;
-   return c3;
+   setInterval(moveDown1, 1000);
+   setInterval(moveDown2, 3000);
+   setInterval(moveDown3, 1500);
 };
 
-const threeEnemies = () => {
-  setTimeout(enemy, 1000);
-  setTimeout(enemy, 5000);
-  setTimeout(enemy, 10000);
-};
+const more = () => {
+  for (let l=0; l<2; l++){
+    enemy();
+  }
+}
 
-threeEnemies();
+setTimeout(more, 3000);
 
 //defense
 //add event listeners to .player
@@ -124,7 +120,7 @@ body.addEventListener('keyup', movePlayer);
 
 //win LOSE
 //if there is an enemy- enemy will change image, change course and retreat. WIN!
-//if the enemy reaches top 865px, you lose!
+//DONE if the enemy reaches top 865px, you lose!
 //MVP2 if there is no enemy, alert that there was no enemy there, you lose.
 //MVP2 sees if there is an opponent there
 
