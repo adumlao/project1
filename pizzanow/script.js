@@ -99,10 +99,22 @@ const movePlayer = () => {
 
    if (x === 32 && move >= 0 && move < 70){
      s1.appendChild(served);
+     c1.classList.add('dead');
+     setTimeout(() => {
+       c1.remove();
+     }, 1000);
    } else if (x === 32 && move > 380 && move < 460){
       s2.appendChild(served);
+      c2.classList.add('dead');
+      setTimeout(() => {
+        c2.remove();
+      }, 1000);
    } else if (move > 740 && move < 860 && x === 32){
      s3.appendChild(served);
+     c3.classList.add('dead');
+     setTimeout(() => {
+       c3.remove();
+     }, 1000);
    }
 
    setTimeout(() => {
@@ -115,10 +127,14 @@ body.addEventListener('keyup', movePlayer);
 
 
 //win LOSE
-//if there is an enemy- enemy will change image, change course and retreat. WIN!
+//DONE if there is an enemy- enemy will change image and disapper.
 //DONE if the enemy reaches top 865px, you lose!
-//MVP2 if there is no enemy, alert that there was no enemy there, you lose.
+
+//win function
+//if c1 and c2 and c3 arrays are 0, you // WARNING:
+
 //MVP2 sees if there is an opponent there
+//MVP2 if there is no enemy, alert that there was no enemy there, you lose.
 
 //intro
 //start button

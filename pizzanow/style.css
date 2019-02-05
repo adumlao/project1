@@ -111,6 +111,17 @@ p{
   transition-timing-function: linear; */
 }
 
+.c1.dead{
+  margin: 8px;
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: yellow;
+  position: absolute;
+  left:30px;
+}
+
 .c2{
   border: 2px solid black;
   height: 65px;
@@ -123,6 +134,17 @@ p{
   transition-timing-function: linear; */
 }
 
+.c2.dead{
+  margin: 8px;
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: yellow;
+  position: absolute;
+  left:420px;
+}
+
 .c3{
   border: 2px solid black;
   height: 65px;
@@ -133,6 +155,17 @@ p{
   background-color: maroon;
   /* transition: top 1s;
   transition-timing-function: linear; */
+}
+
+.c3.dead{
+  margin: 8px;
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: yellow;
+  position: absolute;
+  left:810px;
 }
 
 .bottom{
