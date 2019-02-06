@@ -1,4 +1,3 @@
-
 const path1 = document.querySelector('.path1')
 const path2 = document.querySelector('.path2')
 const path3 = document.querySelector('.path3')
@@ -31,14 +30,20 @@ const interval = () => {
   k += 15;
 
   if (c1.style.top === `230px`){
-    console.log('You Lost!')
     clearInterval(thisInterval);
+    setTimeout(() => {
+      location.replace('lose.html');
+    }, 500);
   } else if (c2.style.top === `235px`){
-     console.log('You Lost!')
      clearInterval(thisInterval);
+     setTimeout(() => {
+       location.replace('lose.html');
+     }, 500);
   } else if (c3.style.top === `240px`){
-    console.log('You Lost!')
     clearInterval(thisInterval);
+    setTimeout(() => {
+      location.replace('lose.html');
+    }, 500);
    };
 
    if (path1.childElementCount === 0){
@@ -51,7 +56,7 @@ const interval = () => {
      k = 0;
    };
 };
-let thisInterval = setInterval(interval, 1000);
+let thisInterval = setInterval(interval, 500);
 
 
 const player = document.querySelector('.player');
@@ -118,8 +123,10 @@ const playerAttack = () => {
 
 const win = () => {
   if (path1.childElementCount === 0 && path2.childElementCount === 0 && path3.childElementCount === 0){
-    console.log('You Won');
     clearInterval(youWon);
+    setTimeout(() => {
+      location.replace('win.html');
+    }, 500);
   }
 };
 let youWon = setInterval(win, 1000);
@@ -127,8 +134,8 @@ let youWon = setInterval(win, 1000);
 const playGame = () => {
   createEnemy();
 
-  body.addEventListener('keyup', movePlayer);
-  body.addEventListener('keyup', playerAttack);
+  document.addEventListener('keyup', movePlayer);
+  document.addEventListener('keyup', playerAttack);
 };
 
 playGame();
