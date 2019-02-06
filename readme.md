@@ -50,6 +50,7 @@ User story is a **description** of **objective**, which helps a person to achiev
   * enemy moves down at a set setInterval
   * win functionality - all enemies defeated
   * lose functionality - enemy reaches the player line
+  * create more opponents
   * add a start button
   * add reset button
 2. Graphics / CSS : 8 hrs (day 2 and 3)
@@ -83,10 +84,10 @@ function reverse(string) {
 `**ERROR**: Enemy gets stuck at 30px and does not move down after`                               
 `**RESOLUTION**: None yet`
 
-#### Getting the enemy to move down every 3 seconds
-`**ERROR**:  Created 5 enemies but they all move down together instead of being staggered`                               
+#### Enemy moves down to the bottom immediately instead of transitioning
+`**ERROR**:  `                               
 `**RESOLUTION**: None yet`
 
-#### Getting the enemy to move down every 3 seconds
-`**ERROR**: Enemy moves down to the bottom immediately instead of transitioning`                               
+#### Cannot create more than one enemy at a given path
+`**ERROR**: for loop does not seem to generate more enemies`                               
 `**RESOLUTION**: None yet`

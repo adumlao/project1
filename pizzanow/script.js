@@ -21,7 +21,7 @@ let i = 0;
 let j= 0;
 let k =0;
 
-const interval = () => {
+const moveDownAndLose = () => {
   c1.style.top = `${i}px`;
   i += 10;
   c2.style.top = `${j}px`;
@@ -56,7 +56,7 @@ const interval = () => {
      k = 0;
    };
 };
-let thisInterval = setInterval(interval, 500);
+let thisInterval = setInterval(moveDownAndLose, 500);
 
 
 const player = document.querySelector('.player');
@@ -121,7 +121,7 @@ const playerAttack = () => {
 
 };
 
-const win = () => {
+const checkWin = () => {
   if (path1.childElementCount === 0 && path2.childElementCount === 0 && path3.childElementCount === 0){
     clearInterval(youWon);
     setTimeout(() => {
@@ -129,7 +129,7 @@ const win = () => {
     }, 500);
   }
 };
-let youWon = setInterval(win, 1000);
+let youWon = setInterval(checkWin, 1000);
 
 const playGame = () => {
   createEnemy();
