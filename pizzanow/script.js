@@ -25,9 +25,6 @@ let createEnemy = () => {
   c3.push(enemy3);
 };
 
-for (let n=0; n<2; n++){
-createEnemy();
-};
 
 const moveDownAndLose = () => {
 
@@ -118,20 +115,22 @@ const playerAttack = () => {
      s1.appendChild(served);
      c1[0].classList.add('dead');
      setTimeout(() => {
-     path1.removeChild(c1[0]);
+      let c1Enemy = c1.shift();
+      c1Enemy.parentNode.removeChild(c1Enemy);
      }, 1000);
    } else if (y === 32 && move > 380 && move < 460){
       s2.appendChild(served);
       c2[0].classList.add('dead');
       setTimeout(() => {
-      path2.removeChild(c2[0]);
-
+      let c2Enemy = c2.shift();
+      c2Enemy.parentNode.removeChild(c2Enemy);
       }, 1000);
    } else if (move > 740 && move < 860 && y === 32){
      s3.appendChild(served);
      c3[0].classList.add('dead');
      setTimeout(() => {
-     path3.removeChild(c3[0]);
+     let c3Enemy = c3.shift();
+     c3Enemy.parentNode.removeChild(c3Enemy);
      }, 1000);
    }
 
@@ -148,20 +147,14 @@ const checkWin = () => {
 
   if (c1Array.length === 0 && c2Array.length === 0 && c3Array.length === 0){
     console.log('win');
+    clearInterval(enemyMaker);
     clearInterval(youWon);
   };
-
-  // if (path1.childElementCount === 0 && path2.childElementCount === 0 && path3.childElementCount === 0){
-  //   clearInterval(youWon);
-  //   setTimeout(() => {
-  //     location.replace('win.html');
-  //   }, 500);
-  // }
 };
-let youWon = setInterval(checkWin, 1000);
+let youWon = setInterval(checkWin, 5000);
 
 const playGame = () => {
-  enemyMaker = setInterval(createEnemy, 5000);
+  enemyMaker = setInterval(createEnemy, 4000);
 
   document.addEventListener('keyup', movePlayer);
   document.addEventListener('keyup', playerAttack);
