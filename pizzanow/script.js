@@ -122,12 +122,14 @@ const playerAttack = () => {
 };
 
 const checkWin = () => {
-  if (path1.childElementCount === 0 && path2.childElementCount === 0 && path3.childElementCount === 0){
+  const c1Array = document.querySelectorAll('.c1')
+  const c2Array = document.querySelectorAll('.c2')
+  const c3Array = document.querySelectorAll('.c3')
+
+  if (c1Array.length === 0 && c2Array.length === 0 && c3Array.length === 0){
+    console.log('win');
     clearInterval(youWon);
-    setTimeout(() => {
-      location.replace('win.html');
-    }, 500);
-  }
+  };
 };
 let youWon = setInterval(checkWin, 1000);
 
