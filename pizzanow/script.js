@@ -2,49 +2,67 @@ const path1 = document.querySelector('.path1')
 const path2 = document.querySelector('.path2')
 const path3 = document.querySelector('.path3')
 
-let c1 = document.createElement('div')
-let c2 = document.createElement('div')
-let c3 = document.createElement('div')
+let c1 = [];
+let c2 = [];
+let c3 = [];
+
+let enemyMaker;
 
 let createEnemy = () => {
-  c1.classList.add('c1')
-  path1.appendChild(c1);
+  const enemy1 = document.createElement('div')
+  enemy1.className = 'c1'
+  path1.append(enemy1);
+  c1.push(enemy1);
 
-  c2.classList.add('c2')
-  path2.appendChild(c2);
+  const enemy2 = document.createElement('div')
+  enemy2.className = 'c2'
+  path2.append(enemy2);
+  c2.push(enemy2);
 
-  c3.classList.add('c3')
-  path3.appendChild(c3);
+  const enemy3 = document.createElement('div')
+  enemy3.className = 'c3'
+  path3.append(enemy3);
+  c3.push(enemy3);
 };
 
-let i = 0;
-let j= 0;
-let k =0;
+for (let n=0; n<2; n++){
+createEnemy();
+};
 
 const moveDownAndLose = () => {
-  c1.style.top = `${i}px`;
-  i += 10;
-  c2.style.top = `${j}px`;
-  j += 5;
-  c3.style.top = `${k}px`;
-  k += 15;
 
-  if (c1.style.top === `230px`){
-    clearInterval(thisInterval);
-    setTimeout(() => {
-      location.replace('lose.html');
-    }, 500);
-  } else if (c2.style.top === `235px`){
-     clearInterval(thisInterval);
-     setTimeout(() => {
-       location.replace('lose.html');
-     }, 500);
-  } else if (c3.style.top === `240px`){
-    clearInterval(thisInterval);
-    setTimeout(() => {
-      location.replace('lose.html');
-    }, 500);
-   };
+  c1.forEach( c1Div => {
+    c1Div.style.top = `${c1Div.offsetTop + 10}px`;
+    if (c1Div.style.top === `230px`){
+      clearInterval(thisInterval);
+      clearInterval(enemyMaker);
+      // setTimeout(() => {
+      //   location.replace('lose.html');
+      // }, 500);
+    }
+  });
+
+  c2.forEach( c2Div => {
+    c2Div.style.top = `${c2Div.offsetTop + 5}px`;
+    if (c2Div.style.top === `235px`){
+      clearInterval(thisInterval);
+      clearInterval(enemyMaker);
+      // setTimeout(() => {
+      //   location.replace('lose.html');
+      // }, 500);
+    }
+  });
+
+  c3.forEach( c3Div => {
+    c3Div.style.top = `${c3Div.offsetTop + 15}px`;
+    if (c3Div.style.top === `240px`){
+      clearInterval(thisInterval);
+      clearInterval(enemyMaker);
+      // setTimeout(() => {
+      //   location.replace('lose.html');
+      // }, 500);
+    }
+  });
 
    if (path1.childElementCount === 0){
      i = 0;
@@ -55,6 +73,7 @@ const moveDownAndLose = () => {
    if (path3.childElementCount === 0){
      k = 0;
    };
+
 };
 let thisInterval = setInterval(moveDownAndLose, 500);
 
@@ -97,21 +116,22 @@ const playerAttack = () => {
 
    if (y === 32 && move >= 0 && move < 70){
      s1.appendChild(served);
-     c1.classList.add('dead');
+     c1[0].classList.add('dead');
      setTimeout(() => {
-     path1.removeChild(c1);
+     path1.removeChild(c1[0]);
      }, 1000);
    } else if (y === 32 && move > 380 && move < 460){
       s2.appendChild(served);
-      c2.classList.add('dead');
+      c2[0].classList.add('dead');
       setTimeout(() => {
-      path2.removeChild(c2);
+      path2.removeChild(c2[0]);
+
       }, 1000);
    } else if (move > 740 && move < 860 && y === 32){
      s3.appendChild(served);
-     c3.classList.add('dead');
+     c3[0].classList.add('dead');
      setTimeout(() => {
-     path3.removeChild(c3);
+     path3.removeChild(c3[0]);
      }, 1000);
    }
 
@@ -130,11 +150,18 @@ const checkWin = () => {
     console.log('win');
     clearInterval(youWon);
   };
+
+  // if (path1.childElementCount === 0 && path2.childElementCount === 0 && path3.childElementCount === 0){
+  //   clearInterval(youWon);
+  //   setTimeout(() => {
+  //     location.replace('win.html');
+  //   }, 500);
+  // }
 };
 let youWon = setInterval(checkWin, 1000);
 
 const playGame = () => {
-  createEnemy();
+  enemyMaker = setInterval(createEnemy, 5000);
 
   document.addEventListener('keyup', movePlayer);
   document.addEventListener('keyup', playerAttack);
