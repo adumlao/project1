@@ -3,25 +3,14 @@
 
 ## Project Description
 
-### Game Concepts:
-
-#### Pizza Now!
-  * You run the best pizzeria in town! However, in order to stay #1, you have to keep your rating at 5 stars by making sure the foodbloggers get their slice before they make their way to the counter to follow up on their order.  
+### Pizza, Now!
+  * Game Concept: You run the best pizzeria in town! However, in order to stay #1, you have to keep your rating at 5 stars by making sure the foodbloggers get their pizza in a timely manner.
   * Use the left and right arrow keys to get to the specific counter and use the spacebar to serve a slice.  
   * After you have served all the foodbloggers during the lunch rush, you'll get to keep your title as the best place pizza place in New York!
 
-#### Little Town of Horrors!
-  * Oh no! It looks like skid row has been overrun by Audrey Twos and they are all VERY hungry! Save the day by zapping out these cannibal alien plants!
-  * Use the left and right arrow keys to get to the laser beams and use the spacebar to zap before the Audrey Twos get to the barrier!
-  * After you have killed all these extra-terrestrial vegetation mutations- you've saved the town- and maybe finally get Audrey to notice you.
-
-
-
-
 ## User Stories
 
-User story is a **description** of **objective**, which helps a person to achieve a feature. So that he able to utilize that feature when using software application. User story is a part of Agile development process.  
-[User Story Best Practices](https://github.com/beeva/beeva-best-practices/blob/master/agile/userStories/README.md)  
+**Pizza, Now!** is a game where the player runs around the pizza counter so that he can serve all the customers during the lunch rush before they get to him and complain.  
 
 ## Wireframes
 
@@ -62,31 +51,54 @@ User story is a **description** of **objective**, which helps a person to achiev
   * move start button here
 2. Win-Lose Page (3 hrs- day 4)
   * move reset button here
-3. Animations and transitions (5 hrs - day 4)
 
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project.
+
+### All images are royalty-free and taken from [https://www.freepik.com].
+  * Chef image courtesy of luis_molinero
+  * Blogger image courtesy of borjandreu
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+The code snippet below is a function that checks to see if the player is at a specific pizza station, if the space bar is pressed, it loads a pie onto the tray.  This function also checks if there is a customer coming down to complain, and if there is a customer, a pie gets served, the customer disappears, and the pie gets taken away from the tray.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+const playerAttack = () => {
+
+   const y = event.keyCode;
+
+   let served = document.createElement('div');
+    served.classList.add('served');
+    //if the player is at a specific station and presses the keyboard
+   if (y === 32 && move >= -25 && move < 70){
+     s1.appendChild(served); //a pie gets loaded on the tray
+     if (c1.length > 0){ //if there is a customer coming down
+     c1[0].classList.add('dead'); //that customer will get served pizza
+     setTimeout(() => {
+        let c1Enemy = c1.shift();
+        c1Enemy.parentNode.removeChild(c1Enemy);
+        }, 250); //after 250ms, that customer will get taken out of the array so that the next customer coming down can be served
+     };
+   };
+
+   setTimeout(() => {
+        served.remove();
+      }, 300);// after 300ms, the pie that was just served is taken out of the tray
+
+};
 ```
 
 ## Issues and Resolutions
 
 #### Getting the enemy to move down every 3 seconds
-`**ERROR**: Enemy gets stuck at 30px and does not move down after`                               
-`**RESOLUTION**: None yet`
+`**ERROR**: Enemy gets stuck after moving down from the first pixel iterated and does not move down after`                               
+`**RESOLUTION**:Adding a set interval.
+```
+let checkLose = setInterval(moveDownAndLose, 500);
 
-#### Enemy moves down to the bottom immediately instead of transitioning
-`**ERROR**:  `                               
-`**RESOLUTION**: None yet`
+```
+`
 
 #### Cannot create more than one enemy at a given path
 `**ERROR**: for loop does not seem to generate more enemies`                               
