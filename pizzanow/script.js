@@ -44,9 +44,9 @@ const moveDownAndLose = () => {
     if (c1Div.style.top === `240px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
-      // setTimeout(() => {
-      //   location.replace('lose.html');
-      // }, 750);
+      setTimeout(() => {
+        location.replace('lose.html');
+      }, 750);
     }
   });
 
@@ -55,9 +55,9 @@ const moveDownAndLose = () => {
     if (c2Div.style.top === `240px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
-      // setTimeout(() => {
-      //   location.replace('lose.html');
-      // }, 750);
+      setTimeout(() => {
+        location.replace('lose.html');
+      }, 750);
     }
   });
 
@@ -66,9 +66,9 @@ const moveDownAndLose = () => {
     if (c3Div.style.top === `250px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
-      // setTimeout(() => {
-      //   location.replace('lose.html');
-      // }, 750);
+      setTimeout(() => {
+        location.replace('lose.html');
+      }, 750);
     }
   });
 
@@ -156,9 +156,9 @@ const checkWin = () => {
   if (c1Array.length === 0 && c2Array.length === 0 && c3Array.length === 0){
     clearInterval(enemyMaker);
     clearInterval(youWon);
-    // setTimeout(() => {
-    //   location.replace('win.html');
-    // }, 750);
+    setTimeout(() => {
+      location.replace('win.html');
+    }, 750);
   };
 
 };

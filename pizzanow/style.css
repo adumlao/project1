@@ -1,3 +1,7 @@
+body {
+  background-color: #F9F7F6;
+}
+
 header{
   display: flex;
   justify-content: center;
@@ -5,16 +9,17 @@ header{
 }
 
 h1{
-  border: 2px solid black;
-  background-color: green;
+  border: 1px solid black;
+  background-image: url('images/red.png');
   margin: 15px;
   top: -25px;
-  height: 190px;
-  width: 900px;
+  height: 160px;
+  width: 1200px;
   margin: 50px 15px 0 15px;
   text-align: center;
-  padding-top: 10px;
-  font-size: 125px;
+  padding-top: 40px;
+  font-size: 60px;
+  font-family: 'Rock Salt', cursive;
 }
 
 main{
@@ -25,16 +30,20 @@ main{
 }
 
 .start{
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width:40%;
+  width: 40%;
 }
 
-#instructions{
-  border: 2px solid black;
+.hero-image{
+  background-image: url('images/loadpage.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 385px;
+  border: 1px solid black;
   height: 75%;
-  background-color: indigo;
   margin: 15px;
   display: flex;
   flex-direction: column;
@@ -43,36 +52,30 @@ main{
   margin:5px;
 }
 
-#instructions{
-  font-size: 35px;
-}
-
-p{
-  font-size: 20px;
-  text-align: justify;
-  padding: 0px 35px;
-}
-
 .button{
   border: 2px solid black;
   height: 25%;
-  background-color: yellow;
+  background-image: url('images/red.png');
   margin:15px;
-  width: 200px;
+  width: 385px;
   align-self: center;
   font-size:50px;
 }
 
-.hero-image{
-  border: 2px solid black;
+.instructions{
+  border: 1px solid black;
   height: 500px;
   width: 60%;
-  background-color: blue;
+  background-image: url('images/red.png');
   margin: 15px;
 }
 
-body {
-  background-color: #F9F7F6;
+p{
+  background-color: white;
+  margin: 25px 15px;
+  font-family: 'Rock Salt', cursive;
+  font-size: 19px;
+  text-align: justify;
 }
 
 .scoreboard{
@@ -237,11 +240,49 @@ body {
   align-items: center;
 }
 
-.result{
-  border: 2px solid black;
+.win{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
   height: 110px;
-  width: 750px;
-  background-color: green;
+  width: 950px;
+  background-image: url('images/red.png');
+  margin: 10px;
+  font-size: 75px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.circle{
+  background-image: url(images/pizza.png);
+  background-size: 105%;
+  background-repeat: no-repeat;
+  margin: 5px 20px 15px;
+  background-color: white;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.white{
+  margin: 5px 20px 15px;
+  background-color: white;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.lose{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 110px;
+  width: 950px;
+  background-image: url('images/red.png');
   margin: 10px;
   font-size: 75px;
   text-align: center;
@@ -249,22 +290,43 @@ body {
 }
 
 .review{
-  border: 2px solid black;
-  height: 85px;
-  width: 500px;
-  background-color: blue;
-  margin: -5px 10px 10px 10px;
-  font-size: 25px;
-  padding: 15px;
-  text-align: justify;
+  border: 1px solid black;
+  height: 120px;
+  width: 950px;
+  background-image: url('images/red.png');
 }
 
-.final-image{
-  border: 2px solid black;
-  height: 600px;
+.saying{
+  background-color: white;
+  font-family: 'Rock Salt', cursive;
+  font-size: 15px;
+  text-align: justify;
+  margin: 25px;
+}
+
+span{
+  display: float;
+  float: right;
+}
+
+.win-image{
+  background-image: url(images/winpage.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  height: 500px;
   width: 600px;
-  background-color: purple;
-  margin: 10px;
+  margin: 15px;
+}
+
+.lose-image{
+  background-image: url(images/loser.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  height: 500px;
+  width: 600px;
+  margin: 15px;
 }
 
 #restart{
