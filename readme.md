@@ -10,7 +10,7 @@
 
 ## User Stories
 
-**Pizza, Now!** is a game where the player runs around the pizza counter so that he can serve all the customers during the lunch rush before they get to him and complain.  
+**Pizza, Now!** is a game where the player runs around the pizza counter so that he can serve all the customers during the lunch rush before they get to him and complain.  This game can only be played on a computer screen or laptop.
 
 ## Wireframes
 
