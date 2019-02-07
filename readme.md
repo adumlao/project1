@@ -93,13 +93,35 @@ const playerAttack = () => {
 
 #### Getting the enemy to move down every 3 seconds
 `**ERROR**: Enemy gets stuck after moving down from the first pixel iterated and does not move down after`                               
-`**RESOLUTION**:Adding a set interval.
+`**RESOLUTION**:Adding a set interval.`
 ```
 let checkLose = setInterval(moveDownAndLose, 500);
 
 ```
-`
 
 #### Cannot create more than one enemy at a given path
 `**ERROR**: for loop does not seem to generate more enemies`                               
-`**RESOLUTION**: None yet`
+`**RESOLUTION**: Creating an empty array, adding the created divs to that array, and looping through it.`
+```
+let c1 = [];
+let c2 = [];
+let c3 = [];
+
+let createEnemy = () => {
+
+  const enemy1 = document.createElement('div')
+  enemy1.className = 'c1'
+  path1.append(enemy1);
+  c1.push(enemy1);
+
+  const enemy2 = document.createElement('div')
+  enemy2.className = 'c2'
+  path2.append(enemy2);
+  c2.push(enemy2);
+
+  const enemy3 = document.createElement('div')
+  enemy3.className = 'c3'
+  path3.append(enemy3);
+  c3.push(enemy3);
+};
+```
