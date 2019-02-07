@@ -1,4 +1,4 @@
-# Project Overview
+# [http://pizzanow.surge.sh/]
 
 
 ## Project Description
@@ -124,4 +124,11 @@ let createEnemy = () => {
   path3.append(enemy3);
   c3.push(enemy3);
 };
+```
+#### After an enemy is cleared out of the array, it is still present in the DOM- it is still the first object in the array even though it has been cleared, therefore you can't serve the next customer coming down.
+`**ERROR**: ```c1[0].remove()``` does not work in getting the served customer out of the DOM.`                               
+`**RESOLUTION**: Reworking the Syntax:`
+```
+let c1Enemy = c1.shift();
+c1Enemy.parentNode.removeChild(c1Enemy);
 ```
