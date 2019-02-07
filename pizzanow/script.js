@@ -41,7 +41,7 @@ const moveDownAndLose = () => {
 
   c1.forEach( c1Div => {
     c1Div.style.top = `${c1Div.offsetTop + 15}px`;
-    if (c1Div.style.top === `240px`){
+    if (c1Div.style.top === `255px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
       setTimeout(() => {
@@ -52,7 +52,7 @@ const moveDownAndLose = () => {
 
   c2.forEach( c2Div => {
     c2Div.style.top = `${c2Div.offsetTop + 20}px`;
-    if (c2Div.style.top === `240px`){
+    if (c2Div.style.top === `260px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
       setTimeout(() => {
