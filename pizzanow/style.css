@@ -55,7 +55,7 @@ main{
 .button{
   border: 2px solid black;
   height: 25%;
-  background-image: url('images/red.png');
+  background-color: yellow;
   margin:15px;
   width: 385px;
   align-self: center;
@@ -72,9 +72,9 @@ main{
 
 p{
   background-color: white;
-  margin: 25px 15px;
-  font-family: 'Rock Salt', cursive;
-  font-size: 19px;
+  margin: 45px 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
   text-align: justify;
 }
 
@@ -298,15 +298,17 @@ p{
 
 .saying{
   background-color: white;
-  font-family: 'Rock Salt', cursive;
-  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
   text-align: justify;
   margin: 25px;
+  padding:10px;
 }
 
 span{
   display: float;
   float: right;
+  font-family: 'Rock Salt', cursive;
 }
 
 .win-image{
@@ -314,8 +316,8 @@ span{
   background-size: 100%;
   background-repeat: no-repeat;
   border: 1px solid black;
-  height: 500px;
-  width: 600px;
+  height: 400px;
+  width: 450px;
   margin: 15px;
 }
 
@@ -324,16 +326,32 @@ span{
   background-size: 100%;
   background-repeat: no-repeat;
   border: 1px solid black;
-  height: 500px;
-  width: 600px;
+  height: 400px;
+  width: 450px;
   margin: 15px;
+}
+
+.last{
+  display: flex;
+  justify-content: center;
 }
 
 #restart{
   border: 2px solid black;
   background-color: yellow;
-  margin:10px;
-  width: 250px;
-  font-size:50px;
-  text-align:center;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  font-size: 25px;
+  text-align: center;
+}
+
+#mainpage{
+  border: 2px solid black;
+  background-color: yellow;
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  font-size: 25px;
+  text-align: center;
 }

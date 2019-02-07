@@ -46,7 +46,7 @@ const moveDownAndLose = () => {
       clearInterval(enemyMaker);
       setTimeout(() => {
         location.replace('lose.html');
-      }, 750);
+      }, 1500);
     }
   });
 
@@ -57,7 +57,7 @@ const moveDownAndLose = () => {
       clearInterval(enemyMaker);
       setTimeout(() => {
         location.replace('lose.html');
-      }, 750);
+      }, 1500);
     }
   });
 
@@ -68,7 +68,7 @@ const moveDownAndLose = () => {
       clearInterval(enemyMaker);
       setTimeout(() => {
         location.replace('lose.html');
-      }, 750);
+      }, 1500);
     }
   });
 
