@@ -40,35 +40,35 @@ setInterval(stopMakingEnemies, 1000);
 const moveDownAndLose = () => {
 
   c1.forEach( c1Div => {
-    c1Div.style.top = `${c1Div.offsetTop + 10}px`;
+    c1Div.style.top = `${c1Div.offsetTop + 15}px`;
     if (c1Div.style.top === `240px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
-      setTimeout(() => {
-        location.replace('lose.html');
-      }, 750);
+      // setTimeout(() => {
+      //   location.replace('lose.html');
+      // }, 750);
     }
   });
 
   c2.forEach( c2Div => {
-    c2Div.style.top = `${c2Div.offsetTop + 15}px`;
+    c2Div.style.top = `${c2Div.offsetTop + 20}px`;
     if (c2Div.style.top === `240px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
-      setTimeout(() => {
-        location.replace('lose.html');
-      }, 750);
+      // setTimeout(() => {
+      //   location.replace('lose.html');
+      // }, 750);
     }
   });
 
   c3.forEach( c3Div => {
-    c3Div.style.top = `${c3Div.offsetTop + 20}px`;
-    if (c3Div.style.top === `240px`){
+    c3Div.style.top = `${c3Div.offsetTop + 25}px`;
+    if (c3Div.style.top === `250px`){
       clearInterval(checkLose);
       clearInterval(enemyMaker);
-      setTimeout(() => {
-        location.replace('lose.html');
-      }, 750);
+      // setTimeout(() => {
+      //   location.replace('lose.html');
+      // }, 750);
     }
   });
 
@@ -91,15 +91,15 @@ const movePlayer = () => {
     player.style.left = `${move}px`;
     move -= 30;
      if (move<0){
-      player.style.left = '0px'
+      player.style.left = '10px'
       move = 0;
     };
   } else if (x===39){
     player.style.left =`${move}px`;
     move += 30;
-    if (move>840){
-     player.style.left= '840px'
-     move = 840;
+    if (move>810){
+     player.style.left= '810px'
+     move = 810;
      };
    };
 
@@ -112,7 +112,7 @@ const playerAttack = () => {
    let served = document.createElement('div');
     served.classList.add('served');
 
-   if (y === 32 && move >= 0 && move < 70){
+   if (y === 32 && move >= -25 && move < 70){
      s1.appendChild(served);
      if (c1.length > 0){
      c1[0].classList.add('dead');
@@ -121,7 +121,7 @@ const playerAttack = () => {
         c1Enemy.parentNode.removeChild(c1Enemy);
         }, 250);
      };
-   } else if (y === 32 && move > 380 && move < 460){
+   } else if (y === 32 && move > 350 && move < 470){
       s2.appendChild(served);
       if (c2.length > 0){
       c2[0].classList.add('dead');
@@ -156,9 +156,9 @@ const checkWin = () => {
   if (c1Array.length === 0 && c2Array.length === 0 && c3Array.length === 0){
     clearInterval(enemyMaker);
     clearInterval(youWon);
-    setTimeout(() => {
-      location.replace('win.html');
-    }, 750);
+    // setTimeout(() => {
+    //   location.replace('win.html');
+    // }, 750);
   };
 
 };
